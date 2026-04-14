@@ -6,7 +6,6 @@ Prolog is a declarative programming language<br/>
 it's primarily used as a rational agent, classical AI<br/>
 it percepts queries as input and perform search using DFS with backtracking<br/>
 its based on predicate logic<br/>
-since it's not an imperative language, there's no loops<br/>
 its execution model makes recursion the most natural way to express repetition and search<br/>
 <br/>
 <br/>
