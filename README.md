@@ -8,12 +8,6 @@ it percepts queries as input and perform search using DFS with backtracking<br/>
 its based on predicate logic<br/>
 its execution model makes recursion the most natural way to express repetition and search<br/>
 <br/>
-<br/>
-
----
-
-## DFS (Depth-first search)
-
 DFS (Depth-first search) is a Stack (LIFO) based algorithm<br/>
 Top-to-bottom, left-to-right node traversal<br/>
 therefore, DFS is structurally optimal for recursion<br/>
@@ -265,8 +259,7 @@ true. <br/>
 <br/>
 Stack Overflow. <br/>
 <br/>
-This could be solved with Tail Recursion <br/>
-but other search algorithms (BFS, IDS, A*) are not affected by rule ordering. <br/>
+Rule Ordering constraint in non tail recursive.
 
 ---------------------------------------------------------------------------------------------------
 
@@ -298,9 +291,9 @@ this comes with a cost of redundancy and revisiting shallow nodes <br/>
 but it's cheap comparing to exploring deep levels <br/>
 <br/>
 
-- UCS (Uniform-Cost Search)
-  informed search, based on lowest cost
-  f(n)=g(n) where g(n) is the cumulative cost of n
+- UCS (Uniform-Cost Search) <br>
+  informed search, based on lowest cost <br>
+  f(n)=g(n) where g(n) is the cumulative cost of n <br>
 
 - A* <br/>
  informed search
@@ -318,58 +311,19 @@ https://www.geeksforgeeks.org/machine-learning/search-algorithms-in-ai/ <br/>
 
 ---------------------------------------------------------------------------------------------------
 
-Prolog's built-in DFS is efficient for many problems <br/>
-but implementing other search algorithms in Prolog at top of it comes with great benefit at some cases such as <br/>
-<br/>
-
-- Infinite Search Spaces <br/>
-DFS goes depth-first, it can plunge down an infinitely deep branch <br/>
-BFS explores level by level, guaranteeing it will find shallow solutions first <br/>
-IDS gradually increases depth limits, ensuring a solution is found if it exists at any finite depth <br/>
-<br/>
-
-- Finding Shortest/Least Cost Path <br/>
-DFS returns the first solution it encounters, there's no guarantee of optimality. <br/>
-BFS guarantees the shortest path in unweighted graphs <br/>
-A with heuristics* finds the cheapest path in weighted graphs <br/>
-Uniform Cost Search finds optimal paths when all steps have varying costs <br/>
-<br/>
-
-- Rule Order <br/>
-Algorithms like BFS, IDS, or A* are rule-order independent. <br/>
-They explore the search space based on topology or cost <br/>
-Not by order like DFS which can affect performance <br/>
-<br/>
-
-- Stack overflow <br/>
-Very deep problems (thousands or millions of levels) cause stack overflow crashes. <br/>
-IDS limits depth and restarts <br/>
-<br/>
-
-- High Branching Factors <br/>
-DFS can explore an enormous number of nodes before finding a solution <br/>
-especially if the solution is shallow but the leftmost branch is deep. <br/>
-BFS and A* reduces exploration <br/>
-example: Chess move generation <br/>
-https://stoics.org.uk/~nicos/sware/chess_db/ <br/>
-<br/>
-
-- No Heuristics <br/>
-Heuristics dramatically speed up search. <br/>
-example: Navigation (Manhattan distance heuristic), puzzle solving (number of misplaced tiles) <br/>
-<br/>
-
-- Non-Deterministic or Dynamic Environments <br/>
-Once committed to a path, DFS explores it completely before backtracking. <br/>
-In dynamic or non-deterministic domains, this is inefficient. <br/>
-<br/>
-
-- Solving Constraint Satisfaction Problems (CSPs) <br/>
-Standard backtracking (DFS) suffers from thrashing <br/>
-unlike constraint-guided search <br/>
-example: Sudoku, scheduling, map coloring. <br/>
-<br/>
-
+Prolog's built-in DFS (depth-first search) is efficient for many problems<br>
+but implementing other search algorithms in Prolog on top of it comes with great benefits in cases such as:<br>
+<br>
+Infinite Search Spaces<br>
+Finding Shortest/Least Cost Path<br>
+Rule Order Independence<br>
+Stack Overflow<br>
+High Branching Factors<br> 
+Heuristics<br>
+Solving Constraint Satisfaction Problems (CSPs)<br>
+<br>
+<br>
+https://stackoverflow.com/questions/36235348/prolog-and-limitations-of-backtracking
 ---------------------------------------------------------------------------------------------------
 
 <code> graph_search.pl </code> <br>
@@ -384,6 +338,7 @@ example: Sudoku, scheduling, map coloring. <br/>
 <code> chess_search.pl </code> <br>
 <img width="834" height="705" alt="chess1a" src="https://github.com/user-attachments/assets/d7890a89-4bd7-48eb-953b-c4b1c6daf4ea" /> <br>
 <img width="830" height="694" alt="chess1b" src="https://github.com/user-attachments/assets/df7b4bdd-0c8e-4161-815f-b9c5e043f84b" /> <br>
+https://stoics.org.uk/~nicos/sware/chess_db/ <br>
  <br>
 ------------------------------------------------------------------------------------------
 creep.
