@@ -372,4 +372,18 @@ example: Sudoku, scheduling, map coloring. <br/>
 
 ---------------------------------------------------------------------------------------------------
 
+<code> graph_search.pl </code> <br>
+<img width="900" height="678" alt="graph" src="https://github.com/user-attachments/assets/b42d5bac-3e9f-4df1-91f9-d931435741f4" /> <br>
+ <br>
+<code> left_recursive_ancestor.pl </code> <br>
+<img width="708" height="242" alt="left" src="https://github.com/user-attachments/assets/164e7236-56cf-46d1-854b-84225e188f7e" /> <br>
+ <br>
+<code> deep_maze.pl </code> <br>
+<img width="585" height="233" alt="deepmaze" src="https://github.com/user-attachments/assets/66213adf-9c98-4313-8f79-8219afe3fab7" /> <br>
+ <br>
+<code> chess_search.pl </code> <br>
+<img width="834" height="705" alt="chess1a" src="https://github.com/user-attachments/assets/d7890a89-4bd7-48eb-953b-c4b1c6daf4ea" /> <br>
+<img width="830" height="694" alt="chess1b" src="https://github.com/user-attachments/assets/df7b4bdd-0c8e-4161-815f-b9c5e043f84b" /> <br>
+ <br>
+------------------------------------------------------------------------------------------
 creep.
