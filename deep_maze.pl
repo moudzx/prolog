@@ -1,5 +1,3 @@
-% Algorithms : DFS, IDS
-
 maze(1, 2).
 maze(2, 3).
 maze(3, 4).
@@ -29,21 +27,17 @@ maze(26, 27).
 maze(27, 28).
 maze(28, 29).
 maze(29, 30).
-maze(30, 31).
+
+maze(1, 31).
 maze(31, 32).
 maze(32, 33).
 maze(33, 34).
-maze(34, 35).
-maze(35, 36).
-maze(36, 37).
-maze(37, 38).
-maze(38, 39).
-maze(39, 40).
+maze(34, 40).
+
 goal_maze(40).
 
 dfs_maze(Start, Goal) :-
     dfs_maze(Start, Goal, [Start]).
-
 dfs_maze(Goal, Goal, _).
 dfs_maze(Start, Goal, Visited) :-
     maze(Start, Next),
@@ -54,7 +48,6 @@ ids_maze(Start, Goal) :-
     between(1, 100, Depth),
     depth_maze(Start, Goal, Depth, [Start]),
     !.
-
 depth_maze(Goal, Goal, _, _).
 depth_maze(Start, Goal, Depth, Visited) :-
     Depth > 0,
