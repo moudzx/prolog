@@ -279,7 +279,7 @@ I highly recommend this course <br/>
 
 ---------------------------------------------------------------------------------------------------
 
-## BFS, IDS and A*
+## BFS, IDS, Uniform-Cost and A*
 
 - BFS (Breadth-first seach) explores the search space level by level <br/>
 it expands all nodes at Depth x before moving to Depth x+1 <br/>
@@ -287,26 +287,25 @@ uses Queue (FIFO) <br/>
 <br/>
 
 Unlike DFS, it's complete (if finite branching), it doesn't get stuck in a loop <br/>
-it's typically faster and optimal if (the all steps costs equal) <br/>
-but with higherSpace Complexity, making it memory-intensive. <br/>
-BFS fixes DFS’s incorrectness (non-optimal, incomplete) but at a huge memory cost. <br/>
+it's typically faster and optimal (if the all steps have equal) <br/>
+BFS fixes DFS’s incorrectness (non-optimal, incomplete) but at a huge memory cost (higher Space Complexity). <br/>
 <br/>
 
 - IDS (Iterative-Deepening Search) <br/>
 Combine DFS’s low memory with BFS’s optimality <br/>
-it goes level by level like BFS, <br/>
-but unlike BFS, <br/>
-only if the goal state isn't at the current depth, it expands <br/>
+Traversal is FIFO, expanding is LIFO <br/>
 this comes with a cost of redundancy and revisiting shallow nodes <br/>
 but it's cheap comparing to exploring deep levels <br/>
-Traversal is LIFO, expanding is LIFO <br/>
 <br/>
 
+- UCS (Uniform-Cost Search)
+  informed search, based on lowest cost
+  f(n)=g(n) where g(n) is the cumulative cost of n
+
 - A* <br/>
-unlike former search algorithms <br/>
-A* is an informed seach, <br/>
-it uses heuristics and cost functions <br/>
+ informed search
 f(n)=g(n)+h(n) <br/>
+where h(n) is heuristic function.<br>
 at each node, heuristics make an informed estimation to guide the search toward the goal efficiently <br/>
 Heuristic requirements to guarantee optimality: <br/>
 Admissible: h(n) <= true cost to goal <br/>
@@ -314,13 +313,13 @@ Consistent (monotonic): h(n) <= cost(n, n') + h(n') <br/>
 A* is both complete and optimal provided that the heuristic is admissible and preferably consistent, but like BFS, <br/>
 it can require substantial memory since it stores all generated nodes in its frontier. <br/>
 <br/>
-
+  
 https://www.geeksforgeeks.org/machine-learning/search-algorithms-in-ai/ <br/>
 
 ---------------------------------------------------------------------------------------------------
 
 Prolog's built-in DFS is efficient for many problems <br/>
-but implementing other search algorithms in Prolog at top of it comes with great benefit at some cases: <br/>
+but implementing other search algorithms in Prolog at top of it comes with great benefit at some cases such as <br/>
 <br/>
 
 - Infinite Search Spaces <br/>
