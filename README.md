@@ -341,4 +341,7 @@ https://stackoverflow.com/questions/36235348/prolog-and-limitations-of-backtrack
 https://stoics.org.uk/~nicos/sware/chess_db/ <br>
  <br>
 ------------------------------------------------------------------------------------------
+Run Prolog online:
+https://swish.swi-prolog.org/
+-------------------------------------------------------------------------------------------
 creep.
